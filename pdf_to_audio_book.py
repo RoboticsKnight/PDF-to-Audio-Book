@@ -18,11 +18,12 @@ print(pages)
 speaker = pyttsx3.init()
 
 
-# Getting the page
-page = pdfReader.pages[2]
+for i in range(2, pages + 1):
+    # Getting the page
+    page = pdfReader.pages[i]
 
-# Extracting text from the page
-text = page.extract_text()
+    # Extracting text from the page
+    text = page.extract_text()
 
-speaker.say(text)
-speaker.runAndWait()
+    speaker.say(text)
+    speaker.runAndWait()
