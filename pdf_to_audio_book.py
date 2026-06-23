@@ -16,5 +16,13 @@ print(pages)
 # Text to speach
 # =====================================================================
 speaker = pyttsx3.init()
-speaker.say('Look child I can talk')
+
+
+# Getting the page
+page = pdfReader.pages[2]
+
+# Extracting text from the page
+text = page.extract_text()
+
+speaker.say(text)
 speaker.runAndWait()
