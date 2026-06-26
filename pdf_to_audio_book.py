@@ -13,7 +13,7 @@ pages = len(pdfReader.pages)
 print(pages)
 
 # =====================================================================
-# Text to speach
+# Text to speech
 # =====================================================================
 speaker = pyttsx3.init()
 
@@ -25,5 +25,6 @@ for i in range(2, pages + 1):
     # Extracting text from the page
     text = page.extract_text()
 
+    # Speech
     speaker.say(text)
     speaker.runAndWait()
